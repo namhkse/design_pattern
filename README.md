@@ -1,14 +1,14 @@
-# Define Problem
-================
+Define Problem
+=============
     
-# Brainstorm Solution
-=====================
+Brainstorm Solution
+================
 
-# Pickup Solution
-=================
+Pickup Solution
+============
 
-# Implement The Solution
-========================
+Implement The Solution
+===================
 
-# Review The Results
-====================
+Review The Results
+===============
