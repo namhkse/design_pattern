@@ -13,12 +13,12 @@ public class RedheadDuck extends Duck implements Flyable, Quackable{
     }
 
     @Override
-    public void quack() {
+    public void performQuack() {
         System.out.println(name + " says quack");
     }
 
     @Override
-    public void fly() {
+    public void performFly() {
         System.out.println(name + " is flying");
     }
 
