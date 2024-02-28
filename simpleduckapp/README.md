@@ -1,36 +1,69 @@
-Define Problem
-================
+HAS-A CAN BE BETTER THAN IS-A
+=============================
 
-Tao mot game gia lap may con vit ten la SimUDuck. May con vit co the boi, keu quac quac, bay. Co nhieu loai vit va thiet ke su dung OO deign
+**Design Principle**
+Favor composition over inheritance
+
+Using composition gives you a lot more flexibility. Allow encapsulate a family of algorithms into set of classes, also lets you change behavior at runtime
+
+**The Strategy Pattern**
+Defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+Stratergy lets the algoritm vary independently from clients that use it.
+
+**🧩 Design Puzzle**
+```mermaid
+classDiagram
+    Character --> WeaponBehavior
+    Character <|-- Queen
+    Character <|-- King
+    Character <|-- Troll
+    Character <|-- Knight
+    WeaponBehavior <|.. KnifeBehavior
+    WeaponBehavior <|.. BowAndArrowBehavior
+    WeaponBehavior <|.. AxeBehavior
+    WeaponBehavior <|.. SwordBehavior
+
+    class WeaponBehavior {
+        <<interface>>
+        useWeapon()
+    }
+
+    class KnifeBehavior {
+        useWeapon()
+    }
+
+    class BowAndArrowBehavior {
+        useWeapon()
+    }
     
-- Code is duplicate
-- Change behaviour at run time
-- Maintaince
+    class AxeBehavior {
+        useWeapon()
+    }
+    
+    class SwordBehavior {
+        useWeapon()
+    }
 
-Them vit cao su vao thi xay ra van de la vit cao su co the bay :)
-Brainstorm Solution
-=====================
+    class  Character {
+        <<abstract>>
+        WeaponBehavior weapon
+        fight()
+        setWeapon(WeaponBehavior w)
+    }
 
-Tao mot base class la Duck co 4 method:
+    class Queen {
+        fight()
+    }
 
-display(): hien thi vit
-:   cac sub clas se override method nay de hien thi hinh may con vit
-    khac nhau
+    class King {
+        fight()
+    }
 
-quack(): keu quac quac
-:   base class trien khai, vi con vit nao cung biet keu
+    class Troll {
+        fight() }
 
-fly(): cho vit bay
-:   base class trien khai vi con vit nao cung biet bay  
-
-swim(): cho vit boi
-:   base class trien khai vi con vit nao cung biet boi
-
-Pickup Solution
-=================
-
-Implement The Solution
-========================
-
-Review The Results
-====================
+    class Knight {
+        fight()
+    }
+      
+```
