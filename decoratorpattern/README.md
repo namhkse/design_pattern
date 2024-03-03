@@ -200,3 +200,16 @@ class Mocha {
 }
 
 ```
+
+## 🧰 Tools for your Design Toolbox
+
+OO Principles
+- Encapsulate what varies
+- Favor composition over inhertiance
+- Program to interface, not implemenations
+- Strive for lossely coupled designs between objects that interact
+- Classes should be open for extension but closed for modification
+
+**Decorator**
+Attach additional responsibilites to an object dynamically. Decorators provide a flexible
+alternative to subclassing for extending functionality.
